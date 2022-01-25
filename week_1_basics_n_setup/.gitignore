@@ -1,0 +1,12 @@
+1_terraform_gcp/norse-bond-337916-3746b6ed0e10.json
+services
+*tfstate.backup
+*.lock.hcl
+1_terraform_gcp/terraform.tfstate
+1_terraform_gcp/.terraform/terraform.tfstate
+1_terraform_gcp/.terraform
+2_docker_sql/.ipynb_checkpoints
+2_docker_sql/taxi+_zone_lookup.csv
+2_docker_sql/yellow_tripdata_2021-01.csv
+2_docker_sql/output.csv
+2_docker_sql/ny_taxi_postgres_data
