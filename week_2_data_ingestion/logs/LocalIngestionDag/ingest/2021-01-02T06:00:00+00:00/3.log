@@ -1,0 +1,206 @@
+[2022-01-27 17:17:30,611] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2021-01-02T06:00:00+00:00 [queued]>
+[2022-01-27 17:17:30,621] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2021-01-02T06:00:00+00:00 [queued]>
+[2022-01-27 17:17:30,621] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-27 17:17:30,621] {taskinstance.py:1239} INFO - Starting attempt 3 of 3
+[2022-01-27 17:17:30,621] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-27 17:17:30,636] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): ingest> on 2021-01-02 06:00:00+00:00
+[2022-01-27 17:17:30,643] {standard_task_runner.py:52} INFO - Started process 2167 to run task
+[2022-01-27 17:17:30,646] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest', 'scheduled__2021-01-02T06:00:00+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpp53newdl', '--error-file', '/tmp/tmpcd4cpo8w']
+[2022-01-27 17:17:30,647] {standard_task_runner.py:77} INFO - Job 54: Subtask ingest
+[2022-01-27 17:17:30,741] {logging_mixin.py:109} INFO - Running <TaskInstance: LocalIngestionDag.ingest scheduled__2021-01-02T06:00:00+00:00 [running]> on host f18aba08ba75
+[2022-01-27 17:17:30,805] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-02T06:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-02T06:00:00+00:00
+[2022-01-27 17:17:30,807] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-01-27 17:17:30,808] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'ls /opt/***']
+[2022-01-27 17:17:30,824] {subprocess.py:85} INFO - Output:
+[2022-01-27 17:17:30,830] {subprocess.py:89} INFO - ***-worker.pid
+[2022-01-27 17:17:30,830] {subprocess.py:89} INFO - ***.cfg
+[2022-01-27 17:17:30,830] {subprocess.py:89} INFO - dags
+[2022-01-27 17:17:30,831] {subprocess.py:89} INFO - logs
+[2022-01-27 17:17:30,831] {subprocess.py:89} INFO - output.csv
+[2022-01-27 17:17:30,831] {subprocess.py:89} INFO - plugins
+[2022-01-27 17:17:30,831] {subprocess.py:89} INFO - requirements.txt
+[2022-01-27 17:17:30,831] {subprocess.py:89} INFO - webserver_config.py
+[2022-01-27 17:17:30,831] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-01-27 17:17:30,869] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=ingest, execution_date=20210102T060000, start_date=20220127T171730, end_date=20220127T171730
+[2022-01-27 17:17:30,899] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-01-27 17:17:30,944] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-01-27 19:29:08,958] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2021-01-02T06:00:00+00:00 [queued]>
+[2022-01-27 19:29:08,985] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2021-01-02T06:00:00+00:00 [queued]>
+[2022-01-27 19:29:08,985] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-27 19:29:08,985] {taskinstance.py:1239} INFO - Starting attempt 3 of 3
+[2022-01-27 19:29:08,985] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-27 19:29:09,004] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): ingest> on 2021-01-02 06:00:00+00:00
+[2022-01-27 19:29:09,011] {standard_task_runner.py:52} INFO - Started process 871 to run task
+[2022-01-27 19:29:09,015] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest', 'scheduled__2021-01-02T06:00:00+00:00', '--job-id', '116', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmprrtsn18y', '--error-file', '/tmp/tmpe5jkop97']
+[2022-01-27 19:29:09,016] {standard_task_runner.py:77} INFO - Job 116: Subtask ingest
+[2022-01-27 19:29:09,087] {logging_mixin.py:109} INFO - Running <TaskInstance: LocalIngestionDag.ingest scheduled__2021-01-02T06:00:00+00:00 [running]> on host 9ee291f061ff
+[2022-01-27 19:29:09,146] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-01-27 19:29:09,170] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-02T06:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-02T06:00:00+00:00
+[2022-01-27 19:29:09,170] {logging_mixin.py:109} INFO - yellow_cabs_2021-01 /opt/***/output_2021-01.csv
+[2022-01-27 19:29:09,181] {logging_mixin.py:109} INFO - Connection stablished successfully, started to insert data
+[2022-01-27 19:29:51,592] {logging_mixin.py:109} INFO - Inserted first chunk in 42.411 seconds
+[2022-01-27 19:30:37,711] {logging_mixin.py:109} INFO - Inserted another chunk in 46.118 seconds
+[2022-01-27 19:31:22,150] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 912, in do_executemany
+    cursor.executemany(statement, parameters)
+psycopg2.OperationalError: terminating connection due to administrator command
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_script.py", line 53, in ingest_callable
+    df.to_sql(con=engine, name='yellow_cabs', if_exists='append')
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1770, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1350, in insert_records
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1340, in insert_records
+    table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 967, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 882, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 912, in do_executemany
+    cursor.executemany(statement, parameters)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) terminating connection due to administrator command
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+[SQL: INSERT INTO yellow_cabs (index, "VendorID", tpep_pickup_datetime, tpep_dropoff_datetime, passenger_count, trip_distance, "RatecodeID", store_and_fwd_flag, "PULocationID", "DOLocationID", payment_type, fare_amount, extra, mta_tax, tip_amount, tolls_amount, improvement_surcharge, total_amount, congestion_surcharge) VALUES (%(index)s, %(VendorID)s, %(tpep_pickup_datetime)s, %(tpep_dropoff_datetime)s, %(passenger_count)s, %(trip_distance)s, %(RatecodeID)s, %(store_and_fwd_flag)s, %(PULocationID)s, %(DOLocationID)s, %(payment_type)s, %(fare_amount)s, %(extra)s, %(mta_tax)s, %(tip_amount)s, %(tolls_amount)s, %(improvement_surcharge)s, %(total_amount)s, %(congestion_surcharge)s)]
+[parameters: ({'index': 200000, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 9, 54), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 17, 30, 53), 'passenger_count': 1, 'trip_distance': 2.78, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 232, 'DOLocationID': 97, 'payment_type': 1, 'fare_amount': 14.0, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 2.75, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 18.55, 'congestion_surcharge': 0.0}, {'index': 200001, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 52, 35), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 17, 55, 39), 'passenger_count': 1, 'trip_distance': 0.62, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 170, 'DOLocationID': 107, 'payment_type': 2, 'fare_amount': 4.5, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 0.0, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 8.8, 'congestion_surcharge': 2.5}, {'index': 200002, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 21, 30), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 17, 26, 34), 'passenger_count': 1, 'trip_distance': 0.66, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 239, 'DOLocationID': 238, 'payment_type': 1, 'fare_amount': 5.5, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 0.5, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 10.3, 'congestion_surcharge': 2.5}, {'index': 200003, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 47, 53), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 18, 15, 45), 'passenger_count': 1, 'trip_distance': 6.94, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 170, 'DOLocationID': 40, 'payment_type': 2, 'fare_amount': 23.0, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 0.0, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 27.3, 'congestion_surcharge': 2.5}, {'index': 200004, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 33, 48), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 18, 17, 16), 'passenger_count': 1, 'trip_distance': 18.46, 'RatecodeID': 2, 'store_and_fwd_flag': 'N', 'PULocationID': 132, 'DOLocationID': 163, 'payment_type': 1, 'fare_amount': 52.0, 'extra': 4.5, 'mta_tax': 0.5, 'tip_amount': 13.18, 'tolls_amount': 6.12, 'improvement_surcharge': 0.3, 'total_amount': 79.1, 'congestion_surcharge': 2.5}, {'index': 200005, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 2, 48), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 17, 11, 38), 'passenger_count': 6, 'trip_distance': 1.92, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 263, 'DOLocationID': 74, 'payment_type': 1, 'fare_amount': 8.5, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 2.56, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 15.36, 'congestion_surcharge': 2.5}, {'index': 200006, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 23, 12), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 17, 31, 31), 'passenger_count': 6, 'trip_distance': 1.63, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 75, 'DOLocationID': 238, 'payment_type': 1, 'fare_amount': 7.5, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 1.77, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 13.57, 'congestion_surcharge': 2.5}, {'index': 200007, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 10, 12), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 17, 23, 41), 'passenger_count': 1, 'trip_distance': 2.16, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 142, 'DOLocationID': 236, 'payment_type': 2, 'fare_amount': 11.0, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 0.0, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 15.3, 'congestion_surcharge': 2.5}  ... displaying 10 of 100000 total bound parameter sets ...  {'index': 299998, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 8, 21, 46, 1), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 8, 21, 53, 24), 'passenger_count': 1, 'trip_distance': 1.32, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 141, 'DOLocationID': 163, 'payment_type': 1, 'fare_amount': 7.0, 'extra': 0.5, 'mta_tax': 0.5, 'tip_amount': 1.3, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 12.1, 'congestion_surcharge': 2.5}, {'index': 299999, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 8, 21, 27, 58), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 8, 21, 35, 19), 'passenger_count': 1, 'trip_distance': 2.37, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 264, 'DOLocationID': 223, 'payment_type': 1, 'fare_amount': 9.0, 'extra': 0.5, 'mta_tax': 0.5, 'tip_amount': 2.06, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 12.36, 'congestion_surcharge': 0.0})]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+[2022-01-27 19:31:23,399] {taskinstance.py:1277} INFO - Marking task as FAILED. dag_id=LocalIngestionDag, task_id=ingest, execution_date=20210102T060000, start_date=20220127T192908, end_date=20220127T193123
+[2022-01-27 19:31:23,477] {standard_task_runner.py:92} ERROR - Failed to execute job 116 for task ingest
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 912, in do_executemany
+    cursor.executemany(statement, parameters)
+psycopg2.OperationalError: terminating connection due to administrator command
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_script.py", line 53, in ingest_callable
+    df.to_sql(con=engine, name='yellow_cabs', if_exists='append')
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1770, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1350, in insert_records
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1340, in insert_records
+    table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 967, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 882, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1257, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 912, in do_executemany
+    cursor.executemany(statement, parameters)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) terminating connection due to administrator command
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+[SQL: INSERT INTO yellow_cabs (index, "VendorID", tpep_pickup_datetime, tpep_dropoff_datetime, passenger_count, trip_distance, "RatecodeID", store_and_fwd_flag, "PULocationID", "DOLocationID", payment_type, fare_amount, extra, mta_tax, tip_amount, tolls_amount, improvement_surcharge, total_amount, congestion_surcharge) VALUES (%(index)s, %(VendorID)s, %(tpep_pickup_datetime)s, %(tpep_dropoff_datetime)s, %(passenger_count)s, %(trip_distance)s, %(RatecodeID)s, %(store_and_fwd_flag)s, %(PULocationID)s, %(DOLocationID)s, %(payment_type)s, %(fare_amount)s, %(extra)s, %(mta_tax)s, %(tip_amount)s, %(tolls_amount)s, %(improvement_surcharge)s, %(total_amount)s, %(congestion_surcharge)s)]
+[parameters: ({'index': 200000, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 9, 54), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 17, 30, 53), 'passenger_count': 1, 'trip_distance': 2.78, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 232, 'DOLocationID': 97, 'payment_type': 1, 'fare_amount': 14.0, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 2.75, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 18.55, 'congestion_surcharge': 0.0}, {'index': 200001, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 52, 35), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 17, 55, 39), 'passenger_count': 1, 'trip_distance': 0.62, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 170, 'DOLocationID': 107, 'payment_type': 2, 'fare_amount': 4.5, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 0.0, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 8.8, 'congestion_surcharge': 2.5}, {'index': 200002, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 21, 30), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 17, 26, 34), 'passenger_count': 1, 'trip_distance': 0.66, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 239, 'DOLocationID': 238, 'payment_type': 1, 'fare_amount': 5.5, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 0.5, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 10.3, 'congestion_surcharge': 2.5}, {'index': 200003, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 47, 53), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 18, 15, 45), 'passenger_count': 1, 'trip_distance': 6.94, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 170, 'DOLocationID': 40, 'payment_type': 2, 'fare_amount': 23.0, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 0.0, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 27.3, 'congestion_surcharge': 2.5}, {'index': 200004, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 33, 48), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 18, 17, 16), 'passenger_count': 1, 'trip_distance': 18.46, 'RatecodeID': 2, 'store_and_fwd_flag': 'N', 'PULocationID': 132, 'DOLocationID': 163, 'payment_type': 1, 'fare_amount': 52.0, 'extra': 4.5, 'mta_tax': 0.5, 'tip_amount': 13.18, 'tolls_amount': 6.12, 'improvement_surcharge': 0.3, 'total_amount': 79.1, 'congestion_surcharge': 2.5}, {'index': 200005, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 2, 48), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 17, 11, 38), 'passenger_count': 6, 'trip_distance': 1.92, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 263, 'DOLocationID': 74, 'payment_type': 1, 'fare_amount': 8.5, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 2.56, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 15.36, 'congestion_surcharge': 2.5}, {'index': 200006, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 23, 12), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 17, 31, 31), 'passenger_count': 6, 'trip_distance': 1.63, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 75, 'DOLocationID': 238, 'payment_type': 1, 'fare_amount': 7.5, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 1.77, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 13.57, 'congestion_surcharge': 2.5}, {'index': 200007, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 6, 17, 10, 12), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 6, 17, 23, 41), 'passenger_count': 1, 'trip_distance': 2.16, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 142, 'DOLocationID': 236, 'payment_type': 2, 'fare_amount': 11.0, 'extra': 1.0, 'mta_tax': 0.5, 'tip_amount': 0.0, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 15.3, 'congestion_surcharge': 2.5}  ... displaying 10 of 100000 total bound parameter sets ...  {'index': 299998, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 8, 21, 46, 1), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 8, 21, 53, 24), 'passenger_count': 1, 'trip_distance': 1.32, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 141, 'DOLocationID': 163, 'payment_type': 1, 'fare_amount': 7.0, 'extra': 0.5, 'mta_tax': 0.5, 'tip_amount': 1.3, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 12.1, 'congestion_surcharge': 2.5}, {'index': 299999, 'VendorID': 2, 'tpep_pickup_datetime': datetime.datetime(2021, 1, 8, 21, 27, 58), 'tpep_dropoff_datetime': datetime.datetime(2021, 1, 8, 21, 35, 19), 'passenger_count': 1, 'trip_distance': 2.37, 'RatecodeID': 1, 'store_and_fwd_flag': 'N', 'PULocationID': 264, 'DOLocationID': 223, 'payment_type': 1, 'fare_amount': 9.0, 'extra': 0.5, 'mta_tax': 0.5, 'tip_amount': 2.06, 'tolls_amount': 0.0, 'improvement_surcharge': 0.3, 'total_amount': 12.36, 'congestion_surcharge': 0.0})]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+[2022-01-27 19:31:23,605] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-01-27 19:31:24,739] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
