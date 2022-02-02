@@ -1,2 +1,4 @@
-airflow
 notes_example.md
+logs
+__pycache__
+plugins
