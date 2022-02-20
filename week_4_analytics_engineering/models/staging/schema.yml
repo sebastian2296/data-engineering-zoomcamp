@@ -9,6 +9,7 @@ sources:
       tables:
         - name: green_table
         - name: yellow_table
+        - name: fhv_table
 models:
     - name: stg_green_tripdata
       description: >
