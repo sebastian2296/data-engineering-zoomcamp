@@ -5,6 +5,7 @@ import pyarrow.parquet as pq
 import pyarrow as pa
 from google.cloud import storage
 import logging
+import subprocess
 
 """
 Pre-reqs: 
@@ -102,8 +103,7 @@ def web_to_gcs(year, service):
             month = month[-2:]
             file_name = service + '_tripdata_' + year + '-' + month + '.csv'
             request_url = init_url + file_name
-            df = pd.read_csv(request_url)
-            df.to_csv(file_name, index = False)
+            os.system(f"wget {request_url} -O {file_name}")
             print(f"Local: {file_name}")
             parquetized = format_to_parquet(file_name, service)
             file_name = file_name.replace('.csv', '.parquet')
@@ -114,3 +114,5 @@ def web_to_gcs(year, service):
 
 web_to_gcs('2019', 'green')
 web_to_gcs('2020', 'green')
+web_to_gcs('2019', 'yellow')
+web_to_gcs('2020', 'yellow')
