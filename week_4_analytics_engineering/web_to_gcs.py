@@ -17,7 +17,7 @@ Pre-reqs:
 init_url = 'https://nyc-tlc.s3.amazonaws.com/trip+data/'
 BUCKET = os.environ.get("GCP_GCS_BUCKET", "dtc_data_lake_norse-bond-337916")
 
-table_schema = pa.schema(
+table_schema_green = pa.schema(
     [
         ('VendorID',pa.string()),
         ('lpep_pickup_datetime',pa.timestamp('s')),
@@ -42,12 +42,41 @@ table_schema = pa.schema(
     ]
 )
 
-def format_to_parquet(src_file):
+table_schema_yellow = pa.schema(
+   [
+        ('VendorID', pa.string()), 
+        ('tpep_pickup_datetime', pa.timestamp('s')), 
+        ('tpep_dropoff_datetime', pa.timestamp('s')), 
+        ('passenger_count', pa.int64()), 
+        ('trip_distance', pa.int64()), 
+        ('RatecodeID', pa.string()), 
+        ('store_and_fwd_flag', pa.string()), 
+        ('PULocationID', pa.int64()), 
+        ('DOLocationID', pa.int64()), 
+        ('payment_type', pa.int64()), 
+        ('fare_amount',pa.int64()), 
+        ('extra',pa.int64()), 
+        ('mta_tax', pa.int64()), 
+        ('tip_amount', pa.int64()), 
+        ('tolls_amount', pa.int64()), 
+        ('improvement_surcharge', pa.int64()), 
+        ('total_amount', pa.int64()), 
+        ('congestion_surcharge', pa.int64())]
+
+)
+
+def format_to_parquet(src_file, service):
     if not src_file.endswith('.csv'):
         logging.error("Can only accept source files in CSV format, for the moment")
         return
     table = pv.read_csv(src_file)
-    table = table.cast(table_schema)
+
+    if service == 'yellow':
+        table = table.cast(table_schema_yellow)
+    
+    elif service == 'green':
+        table = table.cast(table_schema_green)
+
     pq.write_table(table, src_file.replace('.csv', '.parquet'))
 
 
@@ -73,7 +102,7 @@ def web_to_gcs(year, service):
             month = month[-2:]
             file_name = service + '_tripdata_' + year + '-' + month + '.csv'
             request_url = init_url + file_name
-            df = pd.read_csv(request_url)
+            df = pd.read_csv(request_url, sep=',', index_col=False, dtype='unicode')
             df.to_csv(file_name, index = False)
             print(f"Local: {file_name}")
             parquetized = format_to_parquet(file_name)
@@ -83,5 +112,5 @@ def web_to_gcs(year, service):
             print(f"GCS: {service}/{file_name}")
 
 
-web_to_gcs('2019', 'green')
-web_to_gcs('2020', 'green')
+#web_to_gcs('2019', 'yellow')
+web_to_gcs('2020', 'yellow')
