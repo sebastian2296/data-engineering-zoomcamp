@@ -105,7 +105,7 @@ def web_to_gcs(year, service):
             df = pd.read_csv(request_url)
             df.to_csv(file_name, index = False)
             print(f"Local: {file_name}")
-            parquetized = format_to_parquet(file_name)
+            parquetized = format_to_parquet(file_name, service)
             file_name = file_name.replace('.csv', '.parquet')
             print(f"Parquet: {file_name}")
             upload_to_gcs(BUCKET, f"{service}/{file_name}", file_name)
