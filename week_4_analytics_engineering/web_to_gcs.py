@@ -102,7 +102,7 @@ def web_to_gcs(year, service):
             month = month[-2:]
             file_name = service + '_tripdata_' + year + '-' + month + '.csv'
             request_url = init_url + file_name
-            df = pd.read_csv(request_url, sep=',', index_col=False, dtype='unicode')
+            df = pd.read_csv(request_url)
             df.to_csv(file_name, index = False)
             print(f"Local: {file_name}")
             parquetized = format_to_parquet(file_name)
