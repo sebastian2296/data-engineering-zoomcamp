@@ -1,0 +1,11 @@
+tripdata
+fhvhv
+*.csv
+.ipynb_checkpoints
+*.parquet
+*.crc
+_SUCCESS
+data_all
+homework
+spark-warehouse
+zones
